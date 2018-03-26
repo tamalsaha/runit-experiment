@@ -1,0 +1,12 @@
+#!/bin/sh
+
+exec 2>&1
+
+source /etc/envvars
+
+echo "Starting myapp ..."
+
+echo myapp-foo >>/dev/stderr
+
+touch /tmp/block
+tail -f /tmp/block
